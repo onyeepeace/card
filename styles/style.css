@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  width: 85%;
+  margin: 50px auto;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7fafc;
+  color: #4c4e61;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-weight: 200;
+  color: #a3a5ae;
+  font-size: 24px;
+  padding-bottom: 15px;
+}
+
+header h1 span {
+  color: #4c4e61;
+  font-weight: 600;
+}
+
+header p {
+  color: #a3a5ae;
+  margin-bottom: 60px;
+}
+
+section > div {
+  background-color: #ffffff;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 4px 20px rgba(187, 203, 224, 0.5);
+          box-shadow: 0 4px 20px rgba(187, 203, 224, 0.5);
+}
+
+div > h1 {
+  font-size: 24px;
+  padding-bottom: 10px;
+  text-align: start;
+}
+
+div > p {
+  color: #a3a5ae;
+  font-size: 14px;
+  line-height: 1.7rem;
+  text-align: start;
+  padding-bottom: 20px;
+}
+
+img {
+  width: 15%;
+}
+
+.supervisor {
+  display: block;
+  border-top: 4px solid #45d3d3;
+  text-align: right;
+}
+
+.team {
+  display: block;
+  border-top: 4px solid #ea5353;
+  text-align: right;
+}
+
+.karma {
+  display: block;
+  border-top: 4px solid #fcaf4a;
+  text-align: right;
+}
+
+.calculator {
+  display: block;
+  border-top: 4px solid #549ef2;
+  text-align: right;
+}
+
+@media screen and (min-width: 760px) {
+  body {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    width: 45%;
+  }
+  header h1, section h1 {
+    font-size: 32px;
+  }
+  header p, section p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  body {
+    width: 80%;
+    margin: 80px auto 0;
+  }
+  header {
+    width: 55%;
+    margin: 0 auto;
+  }
+  header h1, section h1 {
+    font-size: 30px;
+  }
+  header p, section p {
+    font-size: 17px;
+  }
+  section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: ". team ."
+ "supervisor team calculator"
+ "supervisor karma calculator"
+ ". karma .";
+    grid-column-gap: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section > div {
+    padding: 30px;
+    margin: 0;
+  }
+  .supervisor {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: supervisor;
+  }
+  .team {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: team;
+    margin-bottom: 30px;
+  }
+  .karma {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: karma;
+  }
+  .calculator {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+    grid-area: calculator;
+  }
+}
+/*# sourceMappingURL=style.css.map */

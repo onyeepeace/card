@@ -1,0 +1,173 @@
+// Colors
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+$veryDarkBlue: hsl(234, 12%, 34%);
+$grayishBlue: hsl(229, 6%, 66%);
+$veryLightGray: hsl(0, 0%, 98%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    width: 85%;
+    margin: 50px auto;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(247, 250, 252);
+    color: $veryDarkBlue;
+}
+
+header {
+    text-align: center;
+    h1 {
+        font-weight: 200;
+        color: $grayishBlue;
+        font-size: 24px;
+        padding-bottom: 15px;
+        span {
+            color: $veryDarkBlue;
+            font-weight: 600;
+        }
+    }
+    p {
+        color: $grayishBlue;
+        margin-bottom: 60px;
+    }
+}
+
+section > div {
+    background-color: #ffffff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(187, 203, 224, 0.5);
+}
+
+div > h1 {
+    font-size: 24px;
+    padding-bottom: 10px;
+    text-align: start;
+}
+
+div > p {
+    color: $grayishBlue;
+    font-size: 14px;
+    line-height: 1.7rem;
+    text-align: start;
+    padding-bottom: 20px;
+}
+
+img {
+    width: 15%;
+}
+
+.supervisor {
+    display: block;
+    border-top: 4px solid $Cyan;
+    text-align: right;
+}
+
+.team {
+    display: block;
+    border-top: 4px solid $Red;
+    text-align: right;
+}
+
+.karma {
+    display: block;
+    border-top: 4px solid $Orange;
+    text-align: right;
+}
+
+.calculator {
+    display: block;
+    border-top: 4px solid $Blue;
+    text-align: right;
+}
+
+@media screen and (min-width:760px) {
+    body {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    body {
+        width: 45%;
+    }
+
+    header h1, section h1 {
+        font-size: 32px;
+    }
+
+    header p, section p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width:1400px) {
+    body {
+        width: 80%;
+        margin: 80px auto 0;
+    }
+
+    header {
+        width: 55%;
+        margin: 0 auto;
+    }
+
+    header h1, section h1 {
+        font-size: 30px;
+    }
+
+    header p, section p {
+        font-size: 17px;
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        ". team ."
+        "supervisor team calculator"
+        "supervisor karma calculator"
+        ". karma .";
+        grid-column-gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section > div {
+        padding: 30px;
+        margin: 0;
+    }
+
+    .supervisor {
+        grid-area: supervisor;
+    }
+    
+    .team {
+        grid-area: team;
+        margin-bottom: 30px;
+    }
+    
+    .karma {
+        grid-area: karma;
+    }
+    
+    .calculator {
+        grid-area: calculator;
+    }
+}
